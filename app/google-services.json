@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "80079086650",
+    "firebase_url": "https://rakna-a8c9e.firebaseio.com",
+    "project_id": "rakna-a8c9e",
+    "storage_bucket": "rakna-a8c9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80079086650:android:9238064892df2892",
+        "android_client_info": {
+          "package_name": "com.example.omar.rakna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "80079086650-02vsbr09fgflsk9p1mlkga40tkdmdhaf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.omar.rakna",
+            "certificate_hash": "302741b4c0c113011cb44c42e0f1253573c351e7"
+          }
+        },
+        {
+          "client_id": "80079086650-estg3e2b7d7k1qatkmuqgrj20j1qna7d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdkpSZ3Wt-UDgx2OUx2G-vERs-b3YZajg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "80079086650-estg3e2b7d7k1qatkmuqgrj20j1qna7d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

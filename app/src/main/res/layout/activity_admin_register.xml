@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterPages.AdminRegister"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:id="@+id/registerAdminEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="enter email"
+        />
+
+    <EditText
+        android:id="@+id/registerAdminpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="enter password"
+        />
+
+    <Button
+        android:id="@+id/registerAdminAddBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add" />
+</android.widget.LinearLayout>

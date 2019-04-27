@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterPages.AddGarage"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/garageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="garage name"/>
+
+    <EditText
+        android:id="@+id/numberSpaces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="number of spaces"/>
+
+    <EditText
+        android:id="@+id/hourPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="hour price"/>
+
+    <EditText
+        android:id="@+id/garageAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Garage Address" />
+
+    <Button
+        android:id="@+id/garageMylocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="garage in my location now" />
+
+    <Button
+        android:id="@+id/garageLocationMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="set garage location on map from address" />
+
+    <Button
+        android:id="@+id/addGarageDataBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add" />
+</android.widget.LinearLayout>

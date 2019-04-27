@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterPages.UserRegister"
+    android:orientation="vertical"
+    >
+
+
+
+    <EditText
+        android:id="@+id/registrationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="name" />
+
+    <EditText
+        android:id="@+id/registrationEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="email"
+        />
+
+    <EditText
+        android:id="@+id/registrationpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="password"
+        />
+
+    <EditText
+        android:id="@+id/registrationPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="phone"
+        />
+
+    <Button
+        android:id="@+id/registerUserBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="register" />
+
+
+</android.widget.LinearLayout>

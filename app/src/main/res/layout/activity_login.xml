@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:layout_margin="20dp"
+        android:id="@+id/emailLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="93dp"
+        android:hint="enter email"
+        />
+
+    <EditText
+        android:layout_margin="20dp"
+        android:id="@+id/passLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="192dp"
+        android:hint="enter password"
+
+        />
+<Button
+    android:id="@+id/loginBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Login"
+
+    />
+    <TextView
+        android:id="@+id/registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="       register      "
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="308dp" />
+
+</android.widget.LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePages.AdminHome"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/addAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="addAdmin" />
+    <Button
+        android:id="@+id/signoutadmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="signout" />
+    <Button
+        android:id="@+id/addGarageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add Garage" />
+    <Button
+        android:id="@+id/addSupervisroBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add Supervisro" />
+</android.widget.LinearLayout>
