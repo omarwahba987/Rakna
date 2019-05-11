@@ -14,14 +14,20 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/glogo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".CarComeInList"></activity>
+        <activity android:name=".CarOutList" />
+        <activity android:name=".CarInList" />
+        <activity android:name=".ReservationStatues" />
+        <activity android:name=".PreGarageList" />
+        <activity android:name=".ReservatoinDetails" />
+        <activity android:name=".GarageList" />
         <activity android:name=".RegisterPages.AddGarage" />
-        <activity android:name=".GarageList">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,14 +7,30 @@
     tools:context=".RegisterPages.AddGarage"
     android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_margin="35dp"
+        android:layout_centerHorizontal="true"
+        />
+
 
     <EditText
+        android:layout_above="@+id/numberSpaces"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
         android:id="@+id/garageName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="garage name"/>
 
     <EditText
+        android:layout_above="@+id/hourPrice"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
         android:id="@+id/numberSpaces"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,6 +38,10 @@
         android:hint="number of spaces"/>
 
     <EditText
+        android:layout_above="@+id/garageAddress"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
         android:id="@+id/hourPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,26 +49,56 @@
         android:hint="hour price"/>
 
     <EditText
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
         android:id="@+id/garageAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Garage Address" />
 
     <Button
+        android:layout_below="@+id/garageAddress"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/buttonshape"
+        android:textColor="#fff"
+        android:textSize="18dp"
         android:id="@+id/garageMylocation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
         android:text="garage in my location now" />
 
     <Button
+        android:layout_below="@+id/garageMylocation"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/buttonshape"
+        android:textColor="#fff"
+        android:textSize="18dp"
         android:id="@+id/garageLocationMap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="set garage location on map from address" />
+        android:layout_width="380dp"
+        android:layout_height="55dp"
+        android:text="set garage location on map from the above address" />
 
     <Button
+        android:layout_below="@+id/garageLocationMap"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/buttonshape"
+        android:textColor="#fff"
+        android:textSize="18dp"
         android:id="@+id/addGarageDataBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
         android:text="Add" />
-</android.widget.LinearLayout>
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Rakna.com"/>
+</RelativeLayout>

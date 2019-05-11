@@ -1,6 +1,7 @@
 package com.example.omar.rakna.HomePages;
 
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,8 +10,10 @@ import android.widget.Button;
 
 import com.example.omar.rakna.GarageList;
 import com.example.omar.rakna.Login;
+import com.example.omar.rakna.PreGarageList;
 import com.example.omar.rakna.R;
 import com.example.omar.rakna.RegisterPages.UserRegister;
+import com.example.omar.rakna.ReservationStatues;
 import com.example.omar.rakna.Root;
 import com.example.omar.rakna.Users.Garage;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,14 +26,14 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class UserHome extends AppCompatActivity {
-Button signout,goGarage;
-    DatabaseReference data;
+Button signout,goGarage,myReservation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home);
         signout=findViewById(R.id.signoutuser);
+        myReservation=findViewById(R.id.gotoreservationBtn);
         goGarage=findViewById(R.id.gotoGarageListBtn);
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +41,7 @@ Button signout,goGarage;
                 FirebaseAuth.getInstance().signOut();
 
                 Intent intent= new Intent(UserHome.this,Root.class);
+                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("login", "no").apply();
                 startActivity(intent);
                 finish();
             }
@@ -46,34 +50,24 @@ Button signout,goGarage;
         goGarage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                data = FirebaseDatabase.getInstance().getReference().child("Garages");
-                final ArrayList<Garage> garageList=new ArrayList<>();
+                Intent intent= new Intent(UserHome.this, PreGarageList.class);
+                startActivity(intent);
 
-
-                data.addValueEventListener(new ValueEventListener() {
-
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for (DataSnapshot Garages : dataSnapshot.getChildren()) {
-                            Garage g = Garages.getValue(Garage.class);
-                            garageList.add(g);
-
-                        }
-                        Intent intent= new Intent(UserHome.this, GarageList.class);
-                        startActivity(intent);
-
-
-                    }
-
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
 
             }
         });
+        myReservation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(UserHome.this, ReservationStatues.class);
+                startActivity(intent);
+                finish();
+
+
+            }
+        });
+
+
 
     }
 }

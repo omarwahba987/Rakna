@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +7,18 @@
     tools:context=".RegisterPages.AdminRegister"
     android:orientation="vertical"
     >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_margin="35dp"
+        android:layout_centerHorizontal="true"
+        />
 
     <EditText
+        android:layout_above="@+id/registerAdminpass"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
         android:id="@+id/registerAdminEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,6 +27,10 @@
         />
 
     <EditText
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
         android:id="@+id/registerAdminpass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,8 +39,20 @@
         />
 
     <Button
+        android:layout_below="@+id/registerAdminpass"
+        android:layout_margin="20dp"
+        android:background="@drawable/buttonshape"
+        android:textSize="18dp"
+        android:textColor="#fff"
         android:id="@+id/registerAdminAddBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
         android:text="add" />
-</android.widget.LinearLayout>
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Rakna.com"/>
+</RelativeLayout>

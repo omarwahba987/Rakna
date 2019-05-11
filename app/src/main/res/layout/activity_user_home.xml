@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,17 +7,55 @@
     tools:context=".HomePages.UserHome"
 
     android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_margin="25dp"
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
+        android:background="@drawable/buttonshape"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/gotoGarageListBtn"
         android:id="@+id/signoutuser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
         android:text="signout"
          />
     <Button
+        android:background="@drawable/buttonshape"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:id="@+id/gotoGarageListBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
         android:text="need a garage!"
         />
-</android.widget.LinearLayout>
+    <Button
+        android:background="@drawable/buttonshape"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/gotoGarageListBtn"
+        android:id="@+id/gotoreservationBtn"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:text="my reservation"
+        />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Rakna.com"/>
+</RelativeLayout>

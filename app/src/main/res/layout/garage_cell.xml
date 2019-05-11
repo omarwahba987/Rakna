@@ -5,30 +5,45 @@
     android:orientation="vertical"
     >
     <TextView
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:layout_margin="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/garageCellName"
         />
 
     <TextView
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:layout_margin="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/garageCellAddress"
         />
 
     <TextView
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:layout_margin="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/garageCellFreeSpaces"
         />
 
     <TextView
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:layout_margin="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/garageCellhourPrice"
         />
 
     <TextView
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:layout_margin="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/garageCellDistance"

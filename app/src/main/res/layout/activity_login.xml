@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,44 +7,69 @@
     tools:context=".Login"
     android:orientation="vertical"
     >
-
-    <EditText
-        android:layout_margin="20dp"
-        android:id="@+id/emailLogin"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="93dp"
-        android:hint="enter email"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:layout_margin="40dp"
         />
 
     <EditText
-        android:layout_margin="20dp"
-        android:id="@+id/passLogin"
-        android:layout_width="wrap_content"
+        android:layout_above="@+id/passLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:id="@+id/emailLogin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="enter email"
+        android:textSize="23dp"
+
+        />
+
+    <EditText
+
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:id="@+id/passLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="192dp"
+        android:textSize="23dp"
         android:hint="enter password"
 
         />
 <Button
+    android:layout_marginTop="35dp"
+   android:layout_below="@+id/passLogin"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/buttonshape"
+    android:textColor="#fff"
+    android:textSize="20dp"
     android:id="@+id/loginBtn"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="350dp"
+    android:layout_height="45dp"
     android:text="Login"
 
     />
     <TextView
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/loginBtn"
         android:id="@+id/registerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="       register      "
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="308dp" />
+        android:text="don't have account ? "
+        android:textSize="18dp"
+        />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Rakna.com"/>
 
-</android.widget.LinearLayout>
+</RelativeLayout>

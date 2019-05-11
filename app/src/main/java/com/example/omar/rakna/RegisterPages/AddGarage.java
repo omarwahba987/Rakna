@@ -17,9 +17,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-
-
-
 import com.example.omar.rakna.HomePages.AdminHome;
 import com.example.omar.rakna.HomePages.UserHome;
 import com.example.omar.rakna.R;
@@ -71,11 +68,11 @@ public class AddGarage extends AppCompatActivity {
                 mfusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
                     @Override
                     public void onComplete(@NonNull Task<Location> task) {
-                        if (task.isSuccessful())
-                        {
+                        if (task.isSuccessful()) {
                             Location location = task.getResult();
-                            latitude[0] =location.getLatitude();
-                            longitude[0] =location.getLongitude();
+                            latitude[0] = location.getLatitude();
+                            longitude[0] = location.getLongitude();
+                            Toast.makeText(AddGarage.this, "location set", Toast.LENGTH_SHORT).show();
 
 
                         }
@@ -91,7 +88,6 @@ public class AddGarage extends AppCompatActivity {
                 mylocation.setEnabled(false);
 
 
-
                 final String address = editTextgAddress.getText().toString().trim();
                 if (address.isEmpty()) {
                     editTextgAddress.setError("enter garage Address");
@@ -100,10 +96,11 @@ public class AddGarage extends AppCompatActivity {
                 }
                 Geocoder geocoder = new Geocoder(AddGarage.this);
                 try {
-                    List<Address>list=geocoder.getFromLocationName(address,1);
-                    Address location=list.get(0);
-                    latitude[0] =location.getLatitude();
-                    longitude[0] =location.getLongitude();
+                    List<Address> list = geocoder.getFromLocationName(address, 1);
+                    Address location = list.get(0);
+                    latitude[0] = location.getLatitude();
+                    longitude[0] = location.getLongitude();
+                    Toast.makeText(AddGarage.this, "location set", Toast.LENGTH_SHORT).show();
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -129,7 +126,7 @@ public class AddGarage extends AppCompatActivity {
                 }
                 final String name = editTextgname.getText().toString().trim();
                 final String address = editTextgAddress.getText().toString().trim();
-                final String x=editTextNumSpaces.getText().toString();
+                final String x = editTextNumSpaces.getText().toString();
                 final int numOfSpaces = Integer.parseInt(x);
                 final int numOfFreeSpaces = numOfSpaces;
                 final int hourPrice = Integer.parseInt(editTextHourPrice.getText().toString());
@@ -144,24 +141,23 @@ public class AddGarage extends AppCompatActivity {
                     return;
                 }
 
-                if(latitude[0] ==null||longitude[0]==null)
-                {
+                if (latitude[0] == null || longitude[0] == null) {
                     Toast.makeText(AddGarage.this, "choose location button", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 database = FirebaseDatabase.getInstance().getReference("Garages");
                 String id = database.push().getKey();
 
-                Garage garage=new Garage(id,name,address,numOfSpaces,numOfFreeSpaces,hourPrice,latitude[0],longitude[0],1000);
+                Garage garage = new Garage(id, name, address, numOfSpaces, numOfFreeSpaces, hourPrice, latitude[0], longitude[0], 1000);
                 database.child(id).setValue(garage);
 
                 Toast.makeText(AddGarage.this, "Garage added", Toast.LENGTH_SHORT).show();
                 Intent z = getIntent();
                 final String a = z.getStringExtra("email");
                 final String b = z.getStringExtra("password");
-                Intent intent= new Intent(AddGarage.this,AdminHome.class);
-                intent.putExtra("email",a);
-                intent.putExtra("password",b);
+                Intent intent = new Intent(AddGarage.this, AdminHome.class);
+                intent.putExtra("email", a);
+                intent.putExtra("password", b);
                 startActivity(intent);
                 finish();
 

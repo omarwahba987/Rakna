@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,25 +7,65 @@
     tools:context=".HomePages.AdminHome"
     android:orientation="vertical"
     >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_margin="35dp"
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
-        android:id="@+id/addAdmin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="addAdmin" />
-    <Button
         android:id="@+id/signoutadmin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="signout" />
+        android:layout_above="@+id/addAdmin"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonshape"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:text="sign out" />
+    <Button
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonshape"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:id="@+id/addAdmin"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:text="add Admin" />
+
     <Button
         android:id="@+id/addGarageBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="add Garage" />
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:text="add Garage"
+        android:layout_below="@+id/addAdmin"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonshape"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        />
     <Button
+        android:layout_below="@+id/addGarageBtn"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonshape"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
         android:id="@+id/addSupervisroBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
         android:text="add Supervisro" />
-</android.widget.LinearLayout>
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Rakna.com"/>
+</RelativeLayout>

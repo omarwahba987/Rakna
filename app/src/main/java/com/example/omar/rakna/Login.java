@@ -1,6 +1,7 @@
 package com.example.omar.rakna;
 
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -92,6 +93,8 @@ TextView register;
                                     if (type.equals("user"))
                                     {
                                         Intent intent= new Intent(Login.this,UserHome.class);
+                                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("login", "yes").apply();
+
                                         startActivity(intent);
                                         finish();
                                     }
@@ -100,12 +103,18 @@ TextView register;
                                         Intent intent= new Intent(Login.this,AdminHome.class);
                                         intent.putExtra("email",email);
                                         intent.putExtra("password",password);
+                                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("pass", password).apply();
+                                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("login", "yes").apply();
+
+
                                         startActivity(intent);
                                         finish();
                                     }
                                     else if (type.equals("supervisor"))
                                     {
                                         Intent intent= new Intent(Login.this,SuperVisiorHome.class);
+                                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("login", "yes").apply();
+
                                         startActivity(intent);
                                         finish();
 

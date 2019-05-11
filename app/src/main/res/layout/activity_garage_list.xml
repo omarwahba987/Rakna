@@ -4,11 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GarageList">
+    tools:context=".GarageList"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:layout_margin="40dp"
+        />
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.85"
         android:id="@+id/garageList"
+        android:divider="#DA094E"
+        android:dividerHeight="1.5dp"
         ></ListView>
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:textSize="14dp"
+        android:text="Rakna.com"/>
 
 </android.widget.LinearLayout>

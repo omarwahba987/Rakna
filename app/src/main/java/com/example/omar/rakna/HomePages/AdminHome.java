@@ -1,6 +1,7 @@
 package com.example.omar.rakna.HomePages;
 
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -44,6 +45,7 @@ private Button addadmin , signout, addgarage ,addSupervisor;
                 FirebaseAuth.getInstance().signOut();
 
                 Intent intent= new Intent(AdminHome.this,Root.class);
+                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("login", "no").apply();
                 startActivity(intent);
                 finish();
             }

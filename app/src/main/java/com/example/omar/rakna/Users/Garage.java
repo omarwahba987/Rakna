@@ -93,6 +93,16 @@ public class Garage  implements Comparable< Garage >{
         this.longitude = longitude;
     }
 
+    public void reserved(int num)
+    {
+        numOfFreeSpaces=numOfFreeSpaces-num;
+    }
+    public void out(int num)
+    {
+        numOfFreeSpaces=numOfFreeSpaces+num;
+    }
+
+
 
 
     @Override

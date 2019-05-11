@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,14 +7,29 @@
     tools:context=".RegisterPages.SuperVisorRegister"
     android:orientation="vertical"
     >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_margin="35dp"
+        android:layout_centerHorizontal="true"
+        />
 
     <EditText
+        android:layout_above="@+id/emailSupervisor"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
         android:id="@+id/nameSupervisor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="name" />
 
     <EditText
+        android:layout_above="@+id/passSupervisor"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
         android:id="@+id/emailSupervisor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,6 +37,10 @@
         android:hint="email"/>
 
     <EditText
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
         android:id="@+id/passSupervisor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,11 +49,16 @@
 
 
     <TextView
+        android:layout_below="@+id/passSupervisor"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:id="@+id/tt1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="⇊ assign garage ⇊ "
         android:textAlignment="center"/>
     <Spinner
+        android:layout_below="@+id/tt1"
         android:id="@+id/garageSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,10 +66,22 @@
         />
 
     <Button
+        android:layout_below="@+id/garageSpinner"
+        android:layout_margin="15dp"
+        android:background="@drawable/buttonshape"
+        android:textSize="20dp"
+        android:textColor="#fff"
         android:id="@+id/addSupervisroDataBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
         android:text="add supervisor" />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Rakna.com"/>
 
 
-</android.widget.LinearLayout>
+</RelativeLayout>
