@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreGarageList"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_margin="25dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="enter number of spaces you want"
+        android:layout_above="@+id/RNumberSpaces"
+        android:layout_margin="5dp"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:layout_above="@+id/nGmyLocationBtn"
+        android:layout_margin="5dp"
+        android:id="@+id/RNumberSpaces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="number of cars"/>
+    <Button
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/buttonshape"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:id="@+id/nGmyLocationBtn"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:text="get the nearest garages from you" />
+
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonshape"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/nGmyLocationBtn"
+        android:id="@+id/addressNLocationBtn"
+        android:layout_width="410dp"
+        android:layout_height="45dp"
+        android:text="nearest garages from address below" />
+    <EditText
+        android:layout_below="@+id/addressNLocationBtn"
+        android:textColor="#000"
+        android:layout_margin="5dp"
+        android:id="@+id/addressNgarages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter address" />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Rakna.com"/>
+
+</RelativeLayout>

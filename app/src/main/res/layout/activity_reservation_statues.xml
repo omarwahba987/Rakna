@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReservationStatues"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <TextView
+        android:layout_above="@+id/reservationStatues2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:id="@+id/reservationStatues1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:layout_above="@id/reservationStatues3"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:id="@+id/reservationStatues2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:layout_above="@+id/reservationStatues4"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:id="@+id/reservationStatues3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:layout_above="@id/reservationStatues5"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:id="@+id/reservationStatues4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+
+
+    <TextView
+        android:layout_above="@+id/reservationStatues6"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:id="@+id/reservationStatues5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:id="@+id/reservationStatues6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:layout_below="@+id/reservationStatues6"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:id="@+id/reservationStatues7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:layout_below="@+id/reservationStatues7"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:id="@+id/reservationStatues8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <Button
+        android:layout_below="@+id/reservationStatues8"
+        android:background="@drawable/buttonshape"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:id="@+id/reservationStatuescancelBtn"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:text="cancel reservation" />
+
+    <Button
+        android:layout_below="@+id/reservationStatuescancelBtn"
+        android:background="@drawable/buttonshape"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:id="@+id/reservationStatuesgetdBtn"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:text="get direction" />
+
+
+
+    <Button
+        android:layout_below="@+id/reservationStatuesgetdBtn"
+        android:background="@drawable/buttonshape"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:id="@+id/reservationStatuesoutBtn"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:text="checkout" />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Rakna.com"/>
+</RelativeLayout>
