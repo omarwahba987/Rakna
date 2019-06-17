@@ -152,6 +152,7 @@ public class Reservation {
         Date now=Calendar.getInstance().getTime();
         double diff= outTime.getTime()-inTime.getTime();
         diff=diff/(60*60*1000);
+        diff=Math.ceil(diff);
         int res= (int) (diff*hPrice*sNum);
         return res;
     }

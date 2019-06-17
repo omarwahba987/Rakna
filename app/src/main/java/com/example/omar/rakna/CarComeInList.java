@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.omar.rakna.HomePages.SuperVisiorHome;
 import com.example.omar.rakna.HomePages.UserHome;
@@ -43,8 +44,8 @@ ListView listView;
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                listID.clear();
-                PinList.clear();
+               // listID.clear();
+                //PinList.clear();
                 for (DataSnapshot Re : dataSnapshot.getChildren()) {
                     Reservation g = Re.getValue(Reservation.class);
                     if (g.getType().equals("onResponse")&&g.getgId().equals(gId)) {
@@ -53,30 +54,31 @@ ListView listView;
 
                     }
                 }
+                final ArrayAdapter<String> adapter=new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,PinList){
+
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent) {
+                        View view =super.getView(position, convertView, parent);
+
+                        TextView textView=(TextView) view.findViewById(android.R.id.text1);
+
+                        /*YOUR CHOICE OF COLOR*/
+                        textView.setTextColor(Color.BLACK);
+
+                        return view;
+                    }
+                };
+                listView.setAdapter(adapter);
 
 
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(CarComeInList.this, "internet connection failed", Toast.LENGTH_SHORT).show();
             }
         });
-        final ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,PinList){
 
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                View view =super.getView(position, convertView, parent);
-
-                TextView textView=(TextView) view.findViewById(android.R.id.text1);
-
-                /*YOUR CHOICE OF COLOR*/
-                textView.setTextColor(Color.BLACK);
-
-                return view;
-            }
-        };
-        listView.setAdapter(adapter);
 
 
 

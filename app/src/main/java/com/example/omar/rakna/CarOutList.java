@@ -2,14 +2,17 @@ package com.example.omar.rakna;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.omar.rakna.HomePages.SuperVisiorHome;
 import com.google.firebase.database.DataSnapshot;
@@ -41,8 +44,8 @@ public class CarOutList extends AppCompatActivity {
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                listID.clear();
-                PinList.clear();
+                //listID.clear();
+                //PinList.clear();
                 for (DataSnapshot Re : dataSnapshot.getChildren()) {
                     Reservation g = Re.getValue(Reservation.class);
                     if (g.getType().equals("checkout")&&g.getgId().equals(gId)) {
@@ -51,6 +54,21 @@ public class CarOutList extends AppCompatActivity {
 
                     }
                 }
+                final ArrayAdapter<String> adapter=new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,PinList){
+
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent) {
+                        View view =super.getView(position, convertView, parent);
+
+                        TextView textView=(TextView) view.findViewById(android.R.id.text1);
+
+                        /*YOUR CHOICE OF COLOR*/
+                        textView.setTextColor(Color.BLACK);
+
+                        return view;
+                    }
+                };
+                listView.setAdapter(adapter);
 
             }
 //*************
@@ -61,8 +79,7 @@ public class CarOutList extends AppCompatActivity {
         });
 
 
-        final ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,PinList);
-        listView.setAdapter(adapter);
+
 
 
 
